@@ -14,9 +14,9 @@
                 <a href="#home"><img src="images/jjyjlogo.png" alt="Logo - H Plus Sports"></a>
             </div><!-- branding -->
             <ul class="navbar">
-                <li><a href="">home</a></li>
-                <li><a href="/goToLevel">Level Search</a></li>
-                <li><a href="/goToKeyword">Keyword search</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="/goToLevel">Level</a></li>
+                <li><a href="/goToKeyword">Keyword</a></li>
                 <li><a href="/goToDetails">Details</a></li>
             </ul><!-- navbar -->
         </div><!-- container nav-elements -->

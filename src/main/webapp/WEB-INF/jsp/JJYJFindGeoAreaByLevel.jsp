@@ -18,8 +18,10 @@
 				</div>
 				<!-- branding -->
 				<ul class="navbar">
-                                <li><a href="/home">home</a></li>
-                                <li><a href="">search</a></li>
+					<li><a href="">Home</a></li>
+					<li><a href="/goToLevel">Level</a></li>
+					<li><a href="/goToKeyword">Keyword</a></li>
+					<li><a href="/goToDetails">Details</a></li>
                             </ul><!-- navbar -->
 				<!-- navbar -->
 			</div>
@@ -31,7 +33,7 @@
 	<section id="search" class="section">
 		<header class="imageheader"></header>
 		<div class="container">
-			<h2 class="headline">Search Geographic Area</h2>
+			<h2 class="headline">Search Geographic Area by Level</h2>
 			<form action="/search" method="get">
 				<label class="card-title">Search your area</label>
 				 <input path="search" name="jj_keyword" value="">

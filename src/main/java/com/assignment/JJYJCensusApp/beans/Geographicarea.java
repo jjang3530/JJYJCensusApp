@@ -6,27 +6,18 @@ import javax.persistence.Id;
 @Entity
 public class Geographicarea {
     @Id
-    private int id;
-    private String geoareaid;
+    private int geographicAreaID;
     private String code;
     private String level;
-    private String areaname;
+    private String name;
     private String altCode;
 
-    public int getId() {
-        return id;
+    public int getGeographicAreaID() {
+        return geographicAreaID;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getGeoareaid() {
-        return geoareaid;
-    }
-
-    public void setGeoareaid(String geoareaid) {
-        this.geoareaid = geoareaid;
+    public void setGeographicAreaID(int geographicAreaID) {
+        this.geographicAreaID = geographicAreaID;
     }
 
     public String getCode() {
@@ -45,12 +36,12 @@ public class Geographicarea {
         this.level = level;
     }
 
-    public String getAreaname() {
-        return areaname;
+    public String getName() {
+        return name;
     }
 
-    public void setAreaname(String areaname) {
-        this.areaname = areaname;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAltCode() {

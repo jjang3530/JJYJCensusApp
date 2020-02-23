@@ -11,6 +11,6 @@ import java.util.List;
 @Repository
 public interface GeographicareaRepository extends CrudRepository<Geographicarea, Integer> {
 
-    @Query("select p from Geographicarea p where p.areaname like %:name%")
+    @Query("select p from Geographicarea p where p.name like %:name%")
     public List<Geographicarea> searchByName(@Param("name") String name);
 }

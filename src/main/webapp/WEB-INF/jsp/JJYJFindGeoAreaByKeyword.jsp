@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>H+ Sport</title>
+<title>JJYJ Census Search Keyword</title>
 <link rel="stylesheet" href="css/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -14,11 +14,11 @@
 			<div class="container nav-elements">
 				<div class="branding">
 					<a href="home"><img src="images/jjyjlogo.png"
-						alt="Logo - H Plus Sports"></a>
+						alt="Logo - JJYJlogo"></a>
 				</div>
 				<!-- branding -->
 				<ul class="navbar">
-					<li><a href="">Home</a></li>
+					<li><a href="/home">Home</a></li>
 					<li><a href="/goToLevel">Level</a></li>
 					<li><a href="/goToKeyword">Keyword</a></li>
 					<li><a href="/goToDetails">Details</a></li>
@@ -34,45 +34,51 @@
 		<header class="imageheader"></header>
 		<div class="container">
 			<h2 class="headline">Search Geographic Area by Keyword</h2>
-			<form action="/search" method="get">
+			<form action="/SearchKeyword" method="get">
 				<label class="card-title">Search your area</label>
-				 <input path="search" name="jj_keyword" value="">
-			    <input type="submit" value="Search">
+				 <input path="SearchKeyword" name="JJYJ_keyword" value="">
+			    <input type="submit" value="SearchKeyword">
 			</form>
 		</div>
 	</section>
 	<!-- guarantee -->
-            <c:if test="${!empty(JJ_productlist)}">
-    		<section id="products" class="section">
-            <c:forEach var="product" items="${JJ_productlist}">
-    		<div class="productContainer">
-                           
-            				<div class="productContainerItem">
-            					<img id="pic1" src="${product.imagePath}">
-            					<input type="text" name="product"
-            						value="${product.name}"><br />
+	<c:if test="${!empty(JJYJ_arealist)}">
 
-            				</div>
-                        
-            </c:forEach>
-            		</div>
-           
-            </section>
-            </c:if>
+		<section id="products" class="section">
+			<table>
+				<tr>
+					<th>geoAreaID</th>
+					<th>code</th>
+					<th>level</th>
+					<th>name</th>
+					<th>altCode</th>
+				</tr>
+				<c:forEach var="area" items="${JJYJ_arealist}" >
+					<tr>
+						<td>
+							<c:out value="${area.geographicAreaID}" />
+						</td>
+						<td>
+							<c:out value="${area.code}" />
+						</td>
+						<td>
+							<c:out value="${area.level}" />
+						</td>
+						<td>
+							<c:out value="${area.name}" />
+						</td>
+						<td>
+							<c:out value="${area.altCode}" />
+						</td>
+					</tr>
+				</c:forEach>
+			</table>
+		</section>
+	</c:if>
 
 
 	<footer class="footer">
 		<div class="container">
-			<%--        <nav class="nav" role="navigation">--%>
-			<%--            <div class="container nav-elements">--%>
-			<%--                <div class="branding">--%>
-			<%--                    <a href="#home"><img src="images/hpluslogo.svg" alt="Logo - H Plus Sports"></a>--%>
-			<%--                    <p class="address">100 Main Street<br>--%>
-			<%--                        Seattle, WA 98144--%>
-			<%--                    </p>--%>
-			<%--                </div>--%>
-			<%--            </div>--%>
-			<%--        </nav>--%>
 			<p class="legal">Copyright © 2020 JJYJ Census App. All rights reserved.</p>
 		</div><!-- container -->
 	</footer><!-- footer -->

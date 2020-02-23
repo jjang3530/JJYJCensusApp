@@ -10,19 +10,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class SearchController {
+public class SearchKeywordController {
 
-//    @Autowired
-//    private ProductRepository productRepository;
-
-    @GetMapping("/keywordsearch")
-    public String search(@RequestParam("jj_keyword") String search, Model model){
+    @GetMapping("/SearchKeyword")
+    public String search(@RequestParam("JJYJ_keyword") String search, Model model){
         System.out.println("in search controller");
         System.out.println("search criteria: "+search);
 
-        List<Geographicarea> products = new ArrayList<>();
-        products = com.assignment.JJYJCensusApp.DAL.GeoareaDB.selectProductsByName(search);
-        model.addAttribute("JJ_productlist", products);
+        List<Geographicarea> areas = new ArrayList<>();
+        areas = com.assignment.JJYJCensusApp.DAL.GeoareaDB.selectAreasByKeyword(search);
+        model.addAttribute("JJYJ_arealist", areas);
         return "JJYJFindGeoAreaByKeyword";
     }
 

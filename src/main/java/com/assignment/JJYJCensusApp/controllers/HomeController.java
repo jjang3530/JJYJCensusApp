@@ -34,9 +34,4 @@ public class HomeController {
         return "JJYJGeoAreaDetails";
     }
 
-    @ModelAttribute("genderItems")
-    public List<String> getGenderItems(){
-        return Arrays.asList(new String[]{"Male", "Female", "Other"});
-    }
-
  }
